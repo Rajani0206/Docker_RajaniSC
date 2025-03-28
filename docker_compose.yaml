@@ -1,0 +1,12 @@
+services:
+  jenkins:
+    ports:
+      - 8090:8080
+      - 50000:50000
+    volumes:
+      - my_jenkins: /var/jenkins_home
+    image: jenkins/jenkins:latest
+    restart: always
+    container_name: jenkinsYaml
+volumes:
+  my_jenkins: 
